@@ -46,11 +46,10 @@ There are several types of APIs based on their usage and implementation:
 
 * Slack API: This API allows developers to access and integrate the functionality of Slack with other applications. Using the Slack API, developers can build applications that send and receive messages, create and manage channels, and interact with other Slack users.
 
+![](https://assets.website-files.com/5ff66329429d880392f6cba2/61555448696635114d8260f5_API%20work.svg)
 
-
-Here is an example of a simple API written in Go that returns a list of users in JSON format:
-
-Copy code
+## Here is an example of a simple API written in Go that returns a list of users in JSON format:
+```
 package main
 
 import (
@@ -74,16 +73,14 @@ func main() {
 
 	http.ListenAndServe(":8080", nil)
 }
+```
 This API has a single endpoint, /users, which returns a list of users in JSON format when a GET request is made to it. The users variable is a slice of User structs, which represent the user records in the API.
 
-To run the API, you can build and run the Go program. The API will listen for incoming requests on port 8080. For example, you can test the /users endpoint by making a GET request to http://localhost:8080/users using a tool such as cURL or a web browser.
-
-This is just a simple example, and in a real-world API, you would likely have additional endpoints and functionality, such as the ability to create, update, and delete user records. You may also want to add authentication and authorization to secure the API and ensure that only authorized users can access its resources.
+To run the API, you can build and run the Go program. The API will listen for incoming requests on port 8080. For example, you can test the /users endpoint by making a GET request to http://localhost:8080/users using a tool such as cURL or a web browser. This is just a simple example, and in a real-world API, you would likely have additional endpoints and functionality, such as the ability to create, update, and delete user records. You may also want to add authentication and authorization to secure the API and ensure that only authorized users can access its resources.
 
 
-Here is an example of a simple API written in Python using the Flask web framework:
-
-Copy code
+## Here is an example of a simple API written in Python using the Flask web framework - 
+```
 from flask import Flask, jsonify
 
 app = Flask(__name__)
@@ -107,13 +104,12 @@ def get_users():
 
 if __name__ == "__main__":
     app.run()
+```
 This API has a single endpoint, /users, which returns a list of users in JSON format when a GET request is made to it. The users variable is a list of dictionaries, which represent the user records in the API.
 
-To run the API, you can execute the Python script. The API will listen for incoming requests on the default port (5000). For example, you can test the /users endpoint by making a GET request to http://localhost:5000/users using a tool such as cURL or a web browser.
+To run the API, you can execute the Python script. The API will listen for incoming requests on the default port (5000). For example, you can test the /users endpoint by making a GET request to http://localhost:5000/users using a tool such as cURL or a web browser. This is just a simple example, and in a real-world API, you would likely have additional endpoints and functionality, such as the ability to create, update, and delete user records. You may also want to add authentication and authorization to secure the API and ensure that only authorized users can access its resources.
 
-This is just a simple example, and in a real-world API, you would likely have additional endpoints and functionality, such as the ability to create, update, and delete user records. You may also want to add authentication and authorization to secure the API and ensure that only authorized users can access its resources.
-
-# API HAcking
+# API Hacking
 
 API hacking refers to the practice of exploiting vulnerabilities in APIs in order to gain unauthorized access to systems or data. API hacking can be used to attack both the server-side and client-side of an API.
 
@@ -123,40 +119,40 @@ On the client-side, API hacking can involve tactics such as man-in-the-middle at
 
 To prevent API hacking, organizations should implement security measures such as input validation, authentication, and authorization. It is also important to regularly test and monitor APIs for vulnerabilities, and to promptly apply any necessary security patches or updates.
 
-Here are a few examples of API hacking:
+#### Here are a few examples of API hacking - 
 
-SQL injection: This is a type of injection attack in which an attacker injects malicious code into an API request in an attempt to execute unintended actions on the server, such as accessing or modifying sensitive data. For example, an attacker might send an API request with a maliciously crafted parameter that contains SQL code, in an attempt to retrieve sensitive information from a database.
+* SQL injection: This is a type of injection attack in which an attacker injects malicious code into an API request in an attempt to execute unintended actions on the server, such as accessing or modifying sensitive data. For example, an attacker might send an API request with a maliciously crafted parameter that contains SQL code, in an attempt to retrieve sensitive information from a database.
 
-Man-in-the-middle attack: In this type of attack, an attacker intercepts and modifies API traffic in order to gain unauthorized access to data or systems. For example, an attacker might intercept an API request and modify the parameters to gain access to a user's account.
+* Man-in-the-middle attack: In this type of attack, an attacker intercepts and modifies API traffic in order to gain unauthorized access to data or systems. For example, an attacker might intercept an API request and modify the parameters to gain access to a user's account.
 
-Replay attack: This is a type of attack in which an attacker captures and replays valid API requests in an attempt to gain unauthorized access. For example, an attacker might capture a valid API request to transfer funds from one account to another, and then replay the request multiple times in an attempt to drain the account.
+* Replay attack: This is a type of attack in which an attacker captures and replays valid API requests in an attempt to gain unauthorized access. For example, an attacker might capture a valid API request to transfer funds from one account to another, and then replay the request multiple times in an attempt to drain the account.
 
-Denial of service (DoS) attack: In a DoS attack, an attacker floods an API with requests in an attempt to overwhelm and disable it. This can prevent legitimate users from accessing the API and cause disruptions to the system.
+* Denial of service (DoS) attack: In a DoS attack, an attacker floods an API with requests in an attempt to overwhelm and disable it. This can prevent legitimate users from accessing the API and cause disruptions to the system.
 
 It is important for organizations to implement security measures to prevent API hacking and protect their systems and data from these types of attacks.
 
 
-Here are the top 10 OWASP (Open Web Application Security Project) API vulnerabilities and a brief explanation of each:
+#### Here are the top 10 OWASP (Open Web Application Security Project) API vulnerabilities and a brief explanation of each - 
 
-Broken object level authorization: This vulnerability occurs when an API does not properly enforce object-level permissions, allowing unauthorized users to access or modify sensitive data.
+* Broken object level authorization: This vulnerability occurs when an API does not properly enforce object-level permissions, allowing unauthorized users to access or modify sensitive data.
 
-Broken authentication and session management: This vulnerability occurs when an API has weak or flawed authentication and session management controls, allowing attackers to gain unauthorized access to the system.
+* Broken authentication and session management: This vulnerability occurs when an API has weak or flawed authentication and session management controls, allowing attackers to gain unauthorized access to the system.
 
-Injection: This vulnerability occurs when an API is susceptible to injection attacks, such as SQL injection, allowing attackers to execute unintended actions on the server or access sensitive data.
+* Injection: This vulnerability occurs when an API is susceptible to injection attacks, such as SQL injection, allowing attackers to execute unintended actions on the server or access sensitive data.
 
-Security misconfiguration: This vulnerability occurs when an API has insecure default configurations, incomplete or weak configuration settings, or exposed sensitive information.
+* Security misconfiguration: This vulnerability occurs when an API has insecure default configurations, incomplete or weak configuration settings, or exposed sensitive information.
 
-Sensitive data exposure: This vulnerability occurs when an API exposes sensitive data, such as passwords, to unauthorized users.
+* Sensitive data exposure: This vulnerability occurs when an API exposes sensitive data, such as passwords, to unauthorized users.
 
-XML external entity (XXE) injection: This vulnerability occurs when an API is susceptible to XXE injection attacks, allowing attackers to access sensitive data or execute unintended actions on the server.
+* XML external entity (XXE) injection: This vulnerability occurs when an API is susceptible to XXE injection attacks, allowing attackers to access sensitive data or execute unintended actions on the server.
 
-Broken function level authorization: This vulnerability occurs when an API does not properly enforce function-level permissions, allowing unauthorized users to access or modify sensitive data.
+* Broken function level authorization: This vulnerability occurs when an API does not properly enforce function-level permissions, allowing unauthorized users to access or modify sensitive data.
 
-Cross-site scripting (XSS): This vulnerability occurs when an API is susceptible to XSS attacks, allowing attackers to inject malicious code into the API and execute it on the client-side.
+* Cross-site scripting (XSS): This vulnerability occurs when an API is susceptible to XSS attacks, allowing attackers to inject malicious code into the API and execute it on the client-side.
 
-Insecure direct object references: This vulnerability occurs when an API exposes direct object references, allowing unauthorized users to access sensitive data.
+* Insecure direct object references: This vulnerability occurs when an API exposes direct object references, allowing unauthorized users to access sensitive data.
 
-Failure to restrict URL access: This vulnerability occurs when an API does not properly restrict access to URL resources, allowing unauthorized users to access sensitive data.
+* Failure to restrict URL access: This vulnerability occurs when an API does not properly restrict access to URL resources, allowing unauthorized users to access sensitive data.
 
 It is important for organizations to identify and address these types of vulnerabilities in order to protect their APIs and systems from attack.
 
@@ -185,6 +181,7 @@ In addition to these resources, there are also many online courses, training pro
 
 APIs || Hacking
 * Alex Wang’s post - What is an API, and how does it work? - https://lnkd.in/eSih-jU9
+* Cyber-Guy1 - https://github.com/Cyber-Guy1/API-SecurityEmpire/tree/main/assets
 * API Hacking beginners guide by Dana Epp - https://lnkd.in/eCcQSdxW
 * Corey Ball API workshop here - https://lnkd.in/eZn3aZ66
 * APIsec University by Corey J. Ball and Dan Barahona - https://lnkd.in/ez3jh2Gj
